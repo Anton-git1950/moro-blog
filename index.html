@@ -3,348 +3,243 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MORO Poljoprivredni Dućan — Novosti</title>
     <meta
       name="description"
-      content="MORO Poljoprivredni Dućan — blog novosti, akcije, obavijesti i savjeti."
+      content="Moro poljoprivredni dućan – sjeme, gnojiva, zaštita bilja, navodnjavanje, alati i oprema. Posjetite nas u fizičkom dućanu."
     />
-    <meta name="theme-color" content="#f1f3f0" />
+    <meta name="description" content="Moro poljoprivredni dućan – Filipa Grabovca 72, 21230 Sinj. Sjeme, gnojiva, zaštita bilja, navodnjavanje i alati." />
+    <title>Moro | Poljoprivredni dućan</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
   </head>
 
+  <div class="modal" id="kontaktModal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">&times;</button>
+
+    <h2>Kontakt informacije</h2>
+
+    <p><strong>Adresa:</strong><br>
+    Filipa Grabovca 72<br>
+    21230 Sinj, Hrvatska</p>
+
+    <p><strong>Telefon:</strong><br>
+    +385 xx xxx xxxx</p>
+
+    <p><strong>Radno vrijeme:</strong><br>
+    Pon–Pet: 08:00–18:00<br>
+    Sub: 08:00–13:00<br>
+    Ned: Zatvoreno</p>
+
+  </div>
+</div>
+
   <body>
-    <!-- Top bar -->
-    <div class="topbar">
-      <div class="wrap topbar-inner">
-        <a class="brand" href="#" id="homeLink" aria-label="Početna">
-          <div class="logo">M</div>
-          <div>
-            <h1>MORO Poljoprivredni Dućan</h1>
-            <small>Novosti • akcije • savjeti • obavijesti</small>
-          </div>
-        </a>
+  <!-- Header / Nav -->
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Početna">
+  <span class="brand__text brand__text--big">MORO</span>
+   </a>
 
-        <div class="nav">
-          <button class="pill primary" id="navNews" type="button">
-            Novosti
-          </button>
-          <button
-            class="pill"
-            id="openHours"
-            type="button"
-            aria-haspopup="dialog"
-          >
-            Radno vrijeme
-          </button>
-          <button
-            class="pill"
-            id="openContact"
-            type="button"
-            aria-haspopup="dialog"
-          >
-            Kontakt
-          </button>
-        </div>
-      </div>
-    </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span class="sr-only">Otvori izbornik</span>
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
 
-    <!-- Hero -->
-    <header class="hero" aria-label="Hero">
-      <div class="wrap hero-inner">
-        <div class="badge">
-          <span class="dot"></span>
-          Fizički dućan • Sinj • info prije dolaska
-        </div>
-
-        <h2>Novosti iz MORO dućana — čisto i jasno.</h2>
-        <p>
-          Akcije, noviteti, obavijesti i savjeti — bez webshopa i bez petljanja.
-          Samo konkretno.
-        </p>
-
-        <div class="hero-cta">
-          <button class="btn accent" id="btnLatest" type="button">
-            Pogledaj najnovije
-          </button>
-          <button
-            class="btn"
-            id="btnHours2"
-            type="button"
-            aria-haspopup="dialog"
-          >
-            Radno vrijeme
-          </button>
-          <button
-            class="btn danger"
-            id="btnContact2"
-            type="button"
-            aria-haspopup="dialog"
-          >
-            Kontakt
-          </button>
-        </div>
-
-        <div class="hero-strip" role="note">
-          <div>
-            <span class="label">Adresa</span><b>Filipa Grabovca 72, Sinj</b>
-          </div>
-          <div><span class="label">Pon–Pet</span><b>08:00–19:00</b></div>
-          <div><span class="label">Sub</span><b>08:00–13:00</b></div>
-        </div>
+        <nav class="nav" id="nav">
+          <a href="#kategorije">Kategorije</a>
+          <a href="#o-nama">O nama</a>
+          <a href="#" id="kontaktBtn">Kontakt</a>
+        </nav>
       </div>
     </header>
 
-    <main class="wrap main-pad">
-      <section class="grid">
-        <!-- Main -->
-        <div class="card">
-          <div class="head">
-            <div>
-              <h3 id="mainTitle">Novosti</h3>
-              <div class="muted" id="countInfo"></div>
-            </div>
-            <div class="head-actions">
-              <span
-                class="mini-pill"
-                id="quickHours"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                >⏰ Radno</span
-              >
-              <span
-                class="mini-pill"
-                id="quickContact"
-                role="button"
-                tabindex="0"
-                aria-haspopup="dialog"
-                >📞 Kontakt</span
-              >
+    <!-- Hero -->
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="pill">Fizički dućan • Brza usluga • Provjerene marke</p>
+            <h1>
+              Sve za
+              <span class="accent">sjetvu</span>,
+              <span class="accent2">zaštitu</span> i
+              <span class="accent">navodnjavanje</span>.
+            </h1>
+            <p class="lead">
+              Sjeme, gnojiva, supstrati, sredstva za zaštitu bilja,
+              navodnjavanje, alati i oprema. Dođeš, pitaš, riješiš. Bez drame.
+            </p>
+
+            <div class="hero__cta">
+            <a class="btn btn--solid" href="#kategorije">Pregledaj kategorije</a>
+            <a class="btn btn--ghost" href="#kontakt">Nazovi</a>
+          </div>
+
+            <div class="hero__stats" role="list" aria-label="Prednosti">
+              <div class="stat" role="listitem">
+                <strong>✅ Savjet u dućanu</strong>
+                <span>što, kad i kako</span>
+              </div>
+              <div class="stat" role="listitem">
+                <strong>🚚 Brza nabava</strong>
+                <span>ako nema odmah</span>
+              </div>
+              <div class="stat" role="listitem">
+                <strong>🌱 Sezonska ponuda</strong>
+                <span>u pravo vrijeme</span>
+              </div>
             </div>
           </div>
 
-          <div class="body">
-            <!-- Filters -->
-            <div class="search" style="margin-bottom: 12px">
-              <input
-                id="q"
-                class="input"
-                placeholder="Traži (sjeme, gnojivo, radno vrijeme…)"
-              />
-              <select id="cat" class="input" style="max-width: 240px">
-                <option value="all">Sve kategorije</option>
-                <option value="Akcije">Akcije</option>
-                <option value="Noviteti">Noviteti</option>
-                <option value="Obavijesti">Obavijesti</option>
-                <option value="Savjeti">Savjeti</option>
-              </select>
-              <select id="sort" class="input" style="max-width: 220px">
-                <option value="new">Najnovije</option>
-                <option value="old">Najstarije</option>
-                <option value="title">Naslov A→Z</option>
-              </select>
-            </div>
-
-            <!-- List view -->
-            <div class="list active" id="listView">
-              <div class="posts" id="posts"></div>
-
-              <div class="pager">
-                <button class="btn ghost" id="prevBtn" type="button">
-                  ◀ Prethodna
-                </button>
-                <div class="muted" id="pageInfo"></div>
-                <button class="btn ghost" id="nextBtn" type="button">
-                  Sljedeća ▶
-                </button>
+          <div class="hero__media" aria-label="Fotografija dućana">
+            <!-- UBACI svoju sliku dućana u /images/ducan.jpg -->
+            <img
+              src="images/pozadina.jpg"
+              alt="Moro poljoprivredni dućan"
+              loading="lazy"
+              decoding="async"
+              class="store-img"
+              onerror="this.closest('.hero__media').classList.add('is-missing')"
+            />
+            <div class="media-fallback" aria-hidden="true">
+              <div class="fallback-card">
+                <h3>Dodaj sliku dućana</h3>
+                <p>Stavi file u <code>/images/ducan.jpg</code> i refresh.</p>
               </div>
-            </div>
-
-            <!-- Single post view -->
-            <div class="single" id="singleView">
-              <button class="btn ghost" id="backBtn" type="button">
-                ← Nazad na listu
-              </button>
-              <div class="meta" id="singleMeta"></div>
-              <h2 id="singleTitle"></h2>
-              <div class="content" id="singleContent"></div>
             </div>
           </div>
         </div>
 
-        <!-- Sidebar -->
-        <aside class="info">
-          <div class="card soft">
-            <div class="head">
-              <h3>Brze info</h3>
-            </div>
-            <div class="body">
-              <div class="kv">
-                <span>Lokacija</span>
-                <div>Filipa Grabovca 72, Sinj</div>
-              </div>
-              <div class="divider"></div>
-              <div class="kv">
-                <span>Radno vrijeme</span>
-                <div>Pon–Pet 08:00–19:00 • Sub 08:00–13:00</div>
-              </div>
-              <div class="divider"></div>
-              <button class="btn accent" id="openHoursSidebar" type="button">
-                Otvori radno vrijeme
-              </button>
-              <button class="btn" id="openContactSidebar" type="button">
-                Otvori kontakt
-              </button>
-            </div>
-          </div>
-
-          <div class="card soft">
-            <div class="head">
-              <h3>Google Maps</h3>
-            </div>
-            <div class="body">
-              <div class="muted" style="font-weight: 800; margin-bottom: 10px">
-                Filipa Grabovca 72, Sinj
-              </div>
-              <a
-                class="link"
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.google.com/maps/search/?api=1&query=Filipa%20Grabovca%2072%2C%20Sinj"
-              >
-                Otvori u Google Maps →
-              </a>
-            </div>
-          </div>
-        </aside>
+        <div class="hero__curve" aria-hidden="true"></div>
       </section>
 
-      <footer>
-        © <span id="year"></span> MORO Poljoprivredni Dućan • Sinj
-      </footer>
+      <!-- Categories -->
+      <section class="section" id="kategorije">
+        <div class="container">
+          <header class="section__head">
+            <h2>Kategorije proizvoda</h2>
+            <p>
+              Najtraženije stvari koje ljudi realno kupuju (a ne “wishlist” za
+              iduću sezonu).
+            </p>
+          </header>
+
+          <div class="grid cards">
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">🌾</div>
+              <h3>Sjeme</h3>
+              <p>Povrće, cvijeće, travne smjese, presadnice (sezonski).</p>
+            </a>
+
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">🧪</div>
+              <h3>Zaštita bilja</h3>
+              <p>
+                Preporuka prema kulturi i problemu — sigurno i po pravilima.
+              </p>
+            </a>
+
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">🪴</div>
+              <h3>Gnojiva & supstrati</h3>
+              <p>Mineralna, organska, folijarna + zemlja, kokos, perlit.</p>
+            </a>
+
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">💧</div>
+              <h3>Navodnjavanje</h3>
+              <p>Kap na kap, spojnice, programatori, crijeva, prskalice.</p>
+            </a>
+
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">🛠️</div>
+              <h3>Alati</h3>
+              <p>Ručni alati, škare, pile, potrošni materijal.</p>
+            </a>
+
+            <a class="card" href="#kontakt">
+              <div class="card__icon" aria-hidden="true">📦</div>
+              <h3>Ambalaža</h3>
+              <p>Vreće, vezice, folije, mreže, etikete (po dogovoru).</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- About / Store info -->
+      <section class="section" id="o-nama">
+        <div class="container split">
+          <div class="split__left">
+            <h2>O Moro dućanu</h2>
+            <p>
+              Mi smo klasični “dođeš u dućan i riješiš stvar” tip mjesta. Fokus
+              je na provjerenim proizvodima, sezonskoj robi i savjetu koji ima
+              smisla u praksi.
+            </p>
+
+            <div class="info-cards" id="radno-vrijeme">
+              <div class="info">
+                <h3>Radno vrijeme</h3>
+                <p>
+                  Pon–Pet: <strong>08:00–18:00</strong><br />
+                  Sub: <strong>08:00–13:00</strong><br />
+                  Ned: <strong>Zatvoreno</strong>
+                </p>
+              </div>
+
+<div class="info">
+  <h3>Lokacija</h3>
+  <p>
+    <strong>Filipa Grabovca 72</strong><br/>
+    21230 Sinj, Hrvatska
+  </p>
+  <a 
+    href="https://www.google.com/maps?q=Filipa+Grabovca+72,+21230+Sinj,+Hrvatska" 
+    target="_blank" 
+    rel="noopener"
+    class="map-link">
+    Otvori u Google Maps →
+  </a>
+</div>
+
+              <div class="info">
+                <h3>Kontakt</h3>
+                <p>
+                  Tel: <strong>0917318755</strong><br />
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="split__right">
+            <div class="map">
+              <!-- Zamijeni iframe svojim Google Maps embed kodom -->
+              <iframe
+                title="Karta lokacije"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Filipa+Grabovca+72,+21230+Sinj,+Hrvatska&output=embed"
+              >
+              </iframe>
+            </div>
+<footer class="footer">
+            <p>
+              © <span id="year"></span> Moro poljoprivredni dućan. Sva prava
+              pridržana.
+            </p>
+            <a href="#top" class="to-top">Nazad gore ↑</a>
+          </footer>
+        </div>
+      </section>
     </main>
-
-    <!-- STICKY MINI BAR -->
-    <div class="stickbar" role="navigation" aria-label="Brze akcije">
-      <div class="stickbar-inner">
-        <button
-          class="stickbtn"
-          id="stickHours"
-          type="button"
-          aria-haspopup="dialog"
-        >
-          <span class="ico">⏰</span><span>Radno</span>
-        </button>
-        <button
-          class="stickbtn"
-          id="stickContact"
-          type="button"
-          aria-haspopup="dialog"
-        >
-          <span class="ico">📞</span><span>Kontakt</span>
-        </button>
-        <a
-          class="stickbtn"
-          id="stickMaps"
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.google.com/maps/search/?api=1&query=Filipa%20Grabovca%2072%2C%20Sinj"
-        >
-          <span class="ico">📍</span><span>Maps</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- MODAL: RADNO VRIJEME -->
-    <div class="modal" id="hoursModal" aria-hidden="true">
-      <div class="modal-backdrop" data-close="hoursModal"></div>
-      <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="hoursTitle"
-      >
-        <div class="modal-head">
-          <div class="modal-title">
-            <span class="modal-icon green"></span>
-            <h4 id="hoursTitle">Radno vrijeme</h4>
-          </div>
-          <button
-            class="icon-btn"
-            type="button"
-            aria-label="Zatvori"
-            data-close="hoursModal"
-          >
-            ✕
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="rows">
-            <div class="r">
-              <span>Ponedjeljak — Petak</span><b>08:00 — 19:00</b>
-            </div>
-            <div class="r"><span>Subota</span><b>08:00 — 13:00</b></div>
-            <div class="r"><span>Nedjelja</span><b>Zatvoreno</b></div>
-          </div>
-          <div class="modal-note">
-            Ako bude izmjena (praznik, inventura, itd.), objavimo u
-            <b>Obavijesti</b>.
-          </div>
-        </div>
-        <div class="modal-foot">
-          <button class="btn ghost" type="button" data-close="hoursModal">
-            Zatvori
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL: KONTAKT -->
-    <div class="modal" id="contactModal" aria-hidden="true">
-      <div class="modal-backdrop" data-close="contactModal"></div>
-      <div
-        class="modal-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="contactTitle"
-      >
-        <div class="modal-head">
-          <div class="modal-title">
-            <span class="modal-icon red"></span>
-            <h4 id="contactTitle">Kontakt</h4>
-          </div>
-          <button
-            class="icon-btn"
-            type="button"
-            aria-label="Zatvori"
-            data-close="contactModal"
-          >
-            ✕
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="rows">
-            <div class="r"><span>Telefon</span><b>+385 xx xxx xxxx</b></div>
-            <div class="r"><span>Email</span><b>info@moro-ducan.hr</b></div>
-            <div class="r">
-              <span>Adresa</span><b>Filipa Grabovca 72, Sinj</b>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="muted" style="font-weight: 800">
-            Nema webshopa — za dostupnost/cijenu, najbrže je nazvat.
-          </div>
-        </div>
-        <div class="modal-foot">
-          <button class="btn accent" type="button" data-close="contactModal">
-            OK
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
