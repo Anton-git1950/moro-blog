@@ -687,7 +687,7 @@ textarea {
   height: auto !important;
   aspect-ratio: auto !important;
   display: block !important;
-  border-radius: 20px;
+  border-radius: 0px;
   overflow: hidden;
   background: #fff;
 }
@@ -698,3 +698,4 @@ textarea {
   display: block !important;
   object-fit: initial !important; /* da se ne reže i ne "contain" u čudan okvir */
 }
+
