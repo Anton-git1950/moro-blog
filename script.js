@@ -84,3 +84,4 @@ window.addEventListener('keydown', function (e) {
     kontaktModal.classList.remove('active');
   }
 });
+
