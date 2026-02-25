@@ -285,16 +285,14 @@ code {
   flex-wrap: wrap;
   margin-bottom: 18px;
 }
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.hero__stats{
+  display: flex;
   gap: 10px;
+  flex-wrap: nowrap;
 }
-.stat {
-  border: 1px solid var(--border);
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 12px 12px;
+
+.stat{
+  flex: 1;
 }
 .stat strong {
   display: block;
