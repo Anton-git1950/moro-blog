@@ -304,23 +304,6 @@ code {
   font-size: 13px;
   margin-top: 2px;
 }
-
-.hero__media {
-  border-radius: var(--radius2);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  background: #fff;
-  padding: 12px; /* malo zraka oko slike */
-  min-height: auto;
-}
-.store-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  aspect-ratio: auto;
-  display: block;
-}
 .media-fallback {
   position: absolute;
   inset: 0;
@@ -697,4 +680,21 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.hero__media {
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  display: block !important;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.store-img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: initial !important; /* da se ne reže i ne "contain" u čudan okvir */
 }
